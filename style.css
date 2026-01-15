@@ -1,0 +1,279 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: transparent;
+  color: #fff;
+
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+/* When scrolled */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  color: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Nav links */
+.navbar ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar a,
+.navbar li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* CTA */
+.cta-btn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar {
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #f47a2c;
+  cursor: default;
+}
+
+/* BIG TEXT */
+.hero-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(120px, 20vw, 300px);
+  font-weight: 800;
+  color: #fbe6b5;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+/* LOGO */
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SUBTEXT */
+.hero-subtext {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  max-width: 600px;
+  color: #fbe6b5;
+  font-size: 22px;
+}
+
+.hero-title {
+  filter: url(#wavy);
+}
+
+
+
+.experience-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* LEFT CONTENT */
+.content-left {
+  width: 40%;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 96px;
+  font-weight: 700;
+  color: #fbe6b5;
+}
+
+.section-desc {
+  font-size: 22px;
+  max-width: 420px;
+  margin-top: 20px;
+  color: #fbe6b5;
+}
+
+/* BACKGROUND BLOB */
+.bg-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: blur(40px);
+  opacity: 0.9;
+}
+
+/* MOCKUP CARD */
+.mockup {
+  position: absolute;
+  right: 80px;
+  width: 520px;
+  z-index: 3;
+}
+
+.mockup img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.practice {
+  background: #8fbfc3;
+}
+
+.practice .bg-blob {
+  background: radial-gradient(circle, #f4b46a, transparent 70%);
+}
+
+.upskill {
+  background: #f47a2c;
+}
+
+.upskill .bg-blob {
+  background: radial-gradient(circle, #8fbfc3, transparent 70%);
+}
+
+.play {
+  background: #1f1f1f;
+}
+
+.improve {
+  background: #2b2b2b;
+}
+
+
+/* responsiive  */
+@media (max-width: 768px) {
+  .experience-section {
+    flex-direction: column;
+    padding: 80px 30px;
+  }
+
+  .content-left,
+  .mockup {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+
+  .section-title {
+    font-size: 64px;
+  }
+}
+
+.blob-video-wrapper {
+  position: absolute;
+  width: 380px;          /* ✅ MEDIUM SIZE */
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+
+  
+}
+
+.blob-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 1;
+
+}
+
+
+@media (max-width: 768px) {
+  .blob-video-wrapper {
+    display: none;
+  }
+}
+
+.practice-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #9fc3c7;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+/* Blob container */
+.blob-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;           /* MEDIUM size */
+  height: 420px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.6s ease-out;
+}
+
+/* Blob video */
+.blob-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;          /* ❌ NO BLUR */
+}
+
+/* Text content */
+.practice-content {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+}
+
+.practice-content h2 {
+  font-size: 64px;
+  color: #fff3c4;
+}
+
+.practice-content p {
+  color: #fff3c4;
+  font-size: 18px;
+  line-height: 1.6;
+}
+

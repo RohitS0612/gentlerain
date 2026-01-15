@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentlerain</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Locomotive scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+</head>
+    
+    <body>
+ <nav class="navbar">
+  <div class="nav-left">gentlerain</div>
+
+  <ul class="nav-center">
+    <li>Product</li>
+    <li>Concept</li>
+    <li>For business</li>
+    <li>Partners</li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="#">Sign Up</a>
+    <a href="#">Log in</a>
+    <button class="cta-btn">Try now</button>
+  </div>
+</nav>
+
+
+  <main data-scroll-container>
+  <section class="hero" data-scroll-section>
+
+  <!-- BIG BACKGROUND TEXT -->
+  <h1 class="hero-title">
+    gentlerain
+  </h1>
+
+  <!-- CENTER LOGO -->
+  <div class="hero-logo" data-scroll data-scroll-speed="1">
+    <img src="assets/logo.svg" alt="logo">
+  </div>
+
+  <!-- SUBTEXT -->
+  <p class="hero-subtext" data-scroll data-scroll-speed="2">
+    Leverage AI to grow valuable skills through immersive realistic role play scenarios
+  </p>
+
+</section>
+
+
+<section class="practice-section" data-scroll-section>
+  <div class="blob-wrapper">
+    <video
+      class="blob-video"
+      src="assets/blob_gradient_.webm"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+  </div>
+
+  <div class="practice-content">
+    <h2>Practice</h2>
+    <p>
+      Practice one scene at a time through the immersive story
+      of a fictional company
+    </p>
+  </div>
+</section>
+
+
+
+
+<section class="experience-section upskill" data-scroll-section>
+  <div class="content-left">
+    <h2 class="section-title">Upskill</h2>
+    <p class="section-desc">
+      Upskill by nailing true-to-life challenging work situations
+    </p>
+  </div>
+
+  <div class="bg-blob" data-scroll data-scroll-speed="-2"></div>
+
+  <div class="mockup" data-scroll data-scroll-speed="2">
+    <img src="assets/upskill-ui.png">
+  </div>
+</section>
+
+    <footer data-scroll-section></footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+<svg width="0" height="0">
+  <filter id="wavy">
+    <feTurbulence x="0" y="0" baseFrequency="0.01" numOctaves="2" seed="2">
+      <animate attributeName="baseFrequency"
+        dur="10s"
+        values="0.01;0.02;0.01"
+        repeatCount="indefinite" />
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" scale="20" />
+  </filter>
+</svg>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+</html>
